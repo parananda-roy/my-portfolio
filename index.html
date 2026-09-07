@@ -1,1154 +1,1271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Alex Morgan — Video Editor</title>
-<link rel="stylesheet" href="css/styles.">
+    <meta charset="UTF-8">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <title>Parananda Roy | Professional Graphics Designer</title>
 
-html{
-    scroll-behavior:smooth;
-}
+    <meta
+        name="description"
+        content="Parananda Roy is a Professional Graphics Designer specializing in branding, logo design, social media design and creative visual solutions."
+    >
 
-body{
-    background:#080808;
-    color:#f5f5f5;
-    font-family:"DM Sans",sans-serif;
-    overflow-x:hidden;
-}
+    <meta
+        name="keywords"
+        content="Parananda Roy, Graphic Designer, Professional Graphic Designer, Logo Designer, Branding Designer, Social Media Designer"
+    >
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
+    <meta name="author" content="Parananda Roy">
 
-img,video{
-    width:100%;
-    display:block;
-}
 
-.container{
-    width:min(1180px,90%);
-    margin:auto;
-}
+    <!-- Google Fonts -->
 
-/* ================= NAVBAR ================= */
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    padding:22px 0;
-    background:rgba(8,8,8,.65);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.06);
-}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-.logo{
-    font-family:"Manrope",sans-serif;
-    font-size:23px;
-    font-weight:800;
-    letter-spacing:-1px;
-}
 
-.logo span{
-    color:#b8ff3d;
-}
+    <!-- Font Awesome -->
 
-.nav-links{
-    display:flex;
-    gap:35px;
-    list-style:none;
-}
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
-.nav-links a{
-    font-size:14px;
-    color:#aaa;
-    transition:.3s;
-}
 
-.nav-links a:hover{
-    color:#fff;
-}
+    <!-- CSS -->
 
-.nav-btn{
-    border:1px solid rgba(255,255,255,.2);
-    padding:11px 18px;
-    border-radius:50px;
-    font-size:13px;
-    transition:.3s;
-}
+    <link rel="stylesheet" href="css/style.css">
 
-.nav-btn:hover{
-    background:#b8ff3d;
-    color:#080808;
-    border-color:#b8ff3d;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    position:relative;
-    padding-top:100px;
-}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:70px;
-    align-items:center;
-}
-
-.small-title{
-    color:#b8ff3d;
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-family:"Manrope",sans-serif;
-    font-size:clamp(55px,7vw,100px);
-    line-height:.92;
-    letter-spacing:-6px;
-    max-width:800px;
-}
-
-.hero h1 span{
-    color:#888;
-}
-
-.hero-text{
-    color:#999;
-    font-size:16px;
-    line-height:1.8;
-    max-width:540px;
-    margin:30px 0;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:14px;
-    align-items:center;
-}
-
-.btn{
-    padding:15px 24px;
-    border-radius:50px;
-    font-size:14px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn-primary{
-    background:#b8ff3d;
-    color:#080808;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(184,255,61,.2);
-}
-
-.btn-outline{
-    border:1px solid #292929;
-    color:#ddd;
-}
-
-.btn-outline:hover{
-    background:#151515;
-}
-
-.hero-image{
-    position:relative;
-}
-
-.hero-image img{
-    height:570px;
-    object-fit:cover;
-    border-radius:22px;
-    filter:grayscale(20%);
-}
-
-.image-label{
-    position:absolute;
-    bottom:20px;
-    left:20px;
-    right:20px;
-    padding:15px 18px;
-    background:rgba(0,0,0,.6);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:14px;
-    display:flex;
-    justify-content:space-between;
-}
-
-.image-label small{
-    color:#999;
-}
-
-/* ================= MARQUEE ================= */
-
-.marquee{
-    border-top:1px solid #1b1b1b;
-    border-bottom:1px solid #1b1b1b;
-    overflow:hidden;
-    padding:22px 0;
-}
-
-.marquee-track{
-    display:flex;
-    width:max-content;
-    animation:scroll 20s linear infinite;
-}
-
-.marquee span{
-    font-family:"Manrope";
-    font-weight:700;
-    font-size:16px;
-    margin-right:50px;
-    color:#666;
-}
-
-.marquee b{
-    color:#b8ff3d;
-}
-
-@keyframes scroll{
-    from{transform:translateX(0)}
-    to{transform:translateX(-50%)}
-}
-
-/* ================= SECTION ================= */
-
-section{
-    padding:120px 0;
-}
-
-.section-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    margin-bottom:50px;
-}
-
-.section-number{
-    color:#b8ff3d;
-    font-size:12px;
-    letter-spacing:2px;
-}
-
-.section-title{
-    font-family:"Manrope";
-    font-size:clamp(35px,5vw,60px);
-    letter-spacing:-3px;
-    line-height:1;
-}
-
-.section-description{
-    color:#777;
-    max-width:350px;
-    line-height:1.7;
-}
-
-/* ================= SHOWREEL ================= */
-
-.showreel{
-    position:relative;
-    border-radius:24px;
-    overflow:hidden;
-    border:1px solid #222;
-    background:#111;
-}
-
-.showreel video{
-    height:620px;
-    object-fit:cover;
-    opacity:.72;
-}
-
-.video-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(transparent,rgba(0,0,0,.5));
-}
-
-.play{
-    width:85px;
-    height:85px;
-    border-radius:50%;
-    background:#b8ff3d;
-    color:#080808;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:25px;
-    padding-left:4px;
-}
-
-/* ================= PROJECTS ================= */
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px;
-}
-
-.project{
-    position:relative;
-    overflow:hidden;
-    border-radius:20px;
-    background:#111;
-    border:1px solid #1d1d1d;
-}
-
-.project img{
-    height:420px;
-    object-fit:cover;
-    transition:.6s;
-}
-
-.project:hover img{
-    transform:scale(1.05);
-}
-
-.project-info{
-    position:absolute;
-    left:18px;
-    right:18px;
-    bottom:18px;
-    padding:18px;
-    border-radius:14px;
-    background:rgba(5,5,5,.75);
-    backdrop-filter:blur(15px);
-}
-
-.project-info h3{
-    font-family:"Manrope";
-    font-size:20px;
-}
-
-.project-info p{
-    color:#999;
-    font-size:13px;
-    margin-top:5px;
-}
-
-/* ================= SERVICES ================= */
-
-.services{
-    border-top:1px solid #222;
-}
-
-.service{
-    display:grid;
-    grid-template-columns:80px 1fr 300px;
-    align-items:center;
-    gap:30px;
-    padding:35px 0;
-    border-bottom:1px solid #222;
-    transition:.3s;
-}
-
-.service:hover{
-    padding-left:15px;
-}
-
-.service-number{
-    color:#555;
-}
-
-.service h3{
-    font-family:"Manrope";
-    font-size:28px;
-}
-
-.service p{
-    color:#777;
-    line-height:1.6;
-}
-
-/* ================= ABOUT ================= */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:90px;
-    align-items:center;
-}
-
-.about-image img{
-    height:520px;
-    object-fit:cover;
-    border-radius:20px;
-}
-
-.about-content h2{
-    font-family:"Manrope";
-    font-size:clamp(38px,5vw,65px);
-    letter-spacing:-4px;
-    line-height:1;
-}
-
-.about-content h2 span{
-    color:#777;
-}
-
-.about-content p{
-    color:#888;
-    line-height:1.9;
-    margin:30px 0;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.stat{
-    border-top:1px solid #333;
-    padding-top:18px;
-}
-
-.stat strong{
-    font-family:"Manrope";
-    font-size:32px;
-}
-
-.stat small{
-    display:block;
-    color:#666;
-    margin-top:5px;
-}
-
-/* ================= SKILLS ================= */
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-}
-
-.skill{
-    padding:22px;
-    border:1px solid #222;
-    border-radius:15px;
-    display:flex;
-    justify-content:space-between;
-    background:#0d0d0d;
-}
-
-.skill span:last-child{
-    color:#b8ff3d;
-}
-
-/* ================= TESTIMONIAL ================= */
-
-.testimonial{
-    background:#101010;
-    border:1px solid #222;
-    border-radius:24px;
-    padding:60px;
-    text-align:center;
-}
-
-.quote{
-    font-family:"Manrope";
-    font-size:clamp(25px,4vw,45px);
-    line-height:1.25;
-    letter-spacing:-2px;
-}
-
-.client{
-    margin-top:30px;
-    color:#777;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    text-align:center;
-    padding-bottom:80px;
-}
-
-.contact h2{
-    font-family:"Manrope";
-    font-size:clamp(50px,8vw,110px);
-    line-height:.9;
-    letter-spacing:-6px;
-}
-
-.contact h2 span{
-    color:#b8ff3d;
-}
-
-.contact p{
-    color:#777;
-    max-width:500px;
-    margin:25px auto 35px;
-    line-height:1.7;
-}
-
-.socials{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-}
-
-.socials a{
-    padding:12px 18px;
-    border:1px solid #292929;
-    border-radius:50px;
-    font-size:13px;
-}
-
-.socials a:hover{
-    background:#b8ff3d;
-    color:#080808;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    border-top:1px solid #1c1c1c;
-    padding:25px 0;
-    color:#555;
-    font-size:12px;
-}
-
-.footer-inner{
-    display:flex;
-    justify-content:space-between;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:850px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero-grid,
-    .about-grid{
-        grid-template-columns:1fr;
-        gap:40px;
-    }
-
-    .hero h1{
-        letter-spacing:-4px;
-    }
-
-    .hero-image img{
-        height:450px;
-    }
-
-    .projects{
-        grid-template-columns:1fr;
-    }
-
-    .showreel video{
-        height:450px;
-    }
-
-    .service{
-        grid-template-columns:50px 1fr;
-    }
-
-    .service p{
-        grid-column:2;
-    }
-
-    .about-image{
-        order:2;
-    }
-
-    .skills-grid{
-        grid-template-columns:1fr;
-    }
-
-    .section-head{
-        display:block;
-    }
-
-    .section-description{
-        margin-top:20px;
-    }
-}
-
-@media(max-width:500px){
-
-    section{
-        padding:80px 0;
-    }
-
-    .hero{
-        padding-top:130px;
-    }
-
-    .hero h1{
-        font-size:55px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .hero-image img{
-        height:380px;
-    }
-
-    .project img{
-        height:330px;
-    }
-
-    .testimonial{
-        padding:35px 22px;
-    }
-
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-    .contact h2{
-        font-size:55px;
-        letter-spacing:-3px;
-    }
-
-    .footer-inner{
-        flex-direction:column;
-        gap:10px;
-    }
-}
-</style>
 </head>
+
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 
-<header>
-<div class="container nav">
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    <a href="#" class="logo">AM<span>.</span></a>
+<header class="header">
 
-    <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <nav class="navbar">
 
-    <a href="#contact" class="nav-btn">Let's Talk ↗</a>
+        <a href="#home" class="logo">
 
-</div>
+            <span>P</span>arananda<span>.</span>
+
+        </a>
+
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="#home" class="active">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#portfolio">
+                Portfolio
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <a href="#contact" class="nav-button">
+
+            Let's Talk
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+
+        <button class="menu-btn" id="menuBtn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </nav>
+
 </header>
 
 
-<!-- ================= HERO ================= -->
 
-<main>
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-<section class="hero">
-<div class="container hero-grid">
+<section class="hero" id="home">
 
-    <div>
 
-        <div class="small-title">
-            Video Editor / Visual Storyteller
+    <div class="hero-content">
+
+
+        <div class="available">
+
+            <span></span>
+
+            Available for freelance work
+
         </div>
 
-        <h1>
-            I edit<br>
-            <span>stories</span><br>
-            that move.
-        </h1>
 
-        <p class="hero-text">
-            Premium video editing for creators, brands and businesses.
-            I turn raw footage into cinematic stories designed to
-            capture attention and create impact.
+        <p class="hero-small-title">
+
+            HELLO, I'M PARANANDA ROY
+
         </p>
 
+
+        <h1>
+
+            Professional
+
+            <span>Graphics</span>
+
+            Designer
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            I create clean, modern and memorable visual experiences
+            that help brands communicate with confidence.
+
+        </p>
+
+
         <div class="hero-buttons">
-            <a href="#work" class="btn btn-primary">
-                Explore My Work ↗
+
+
+            <a href="#portfolio" class="primary-btn">
+
+                View My Work
+
+                <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
-            <a href="#contact" class="btn btn-outline">
-                Hire Me
+
+            <a href="#contact" class="secondary-btn">
+
+                Contact Me
+
             </a>
+
+
+        </div>
+
+
+        <div class="socials">
+
+
+            <a href="#" aria-label="Behance">
+
+                <i class="fa-brands fa-behance"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="Dribbble">
+
+                <i class="fa-brands fa-dribbble"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
         </div>
 
     </div>
 
+
+
+    <!-- HERO IMAGE -->
 
     <div class="hero-image">
 
-        <!-- নিজের ছবি এখানে বসাও -->
-        <img
-        src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1000&q=85"
-        alt="Video Editor">
 
-        <div class="image-label">
-            <div>
-                <strong>Alex Morgan</strong>
-                <small> — Video Editor</small>
+        <div class="image-outline"></div>
+
+
+        <div class="profile-card">
+
+
+            <img
+                src="photo/profile.jpg"
+                alt="Parananda Roy - Professional Graphics Designer"
+            >
+
+
+            <div class="image-overlay">
+
+                <div class="overlay-text">
+
+                    <span>CREATIVE</span>
+
+                    <strong>DESIGNER</strong>
+
+                </div>
+
             </div>
 
-            <div>2026</div>
         </div>
+
+
+        <!-- Floating Card -->
+
+        <div class="floating-card creative-card">
+
+            <div class="floating-icon">
+
+                <i class="fa-solid fa-pen-nib"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>Creative Mind</strong>
+
+                <small>Design • Branding • Visuals</small>
+
+            </div>
+
+        </div>
+
+
+        <div class="floating-card experience-card">
+
+            <strong>PR</strong>
+
+            <div>
+
+                <small>GRAPHIC DESIGN</small>
+
+                <span>Portfolio</span>
+
+            </div>
+
+        </div>
+
 
     </div>
 
-</div>
 </section>
 
 
-<!-- ================= MARQUEE ================= -->
 
-<div class="marquee">
+<!-- =====================================================
+     STATS
+===================================================== -->
 
-<div class="marquee-track">
+<section class="stats">
 
-<span>VIDEO EDITING <b>✦</b></span>
-<span>COLOR GRADING <b>✦</b></span>
-<span>MOTION DESIGN <b>✦</b></span>
-<span>SHORT FORM <b>✦</b></span>
-<span>STORYTELLING <b>✦</b></span>
 
-<span>VIDEO EDITING <b>✦</b></span>
-<span>COLOR GRADING <b>✦</b></span>
-<span>MOTION DESIGN <b>✦</b></span>
-<span>SHORT FORM <b>✦</b></span>
-<span>STORYTELLING <b>✦</b></span>
+    <div class="stat">
 
-</div>
-</div>
-
-
-<!-- ================= SHOWREEL ================= -->
-
-<section>
-
-<div class="container">
-
-<div class="section-head">
-
-    <div>
-        <div class="section-number">01 / SHOWREEL</div>
-        <h2 class="section-title">The Reel.</h2>
-    </div>
-
-    <p class="section-description">
-        A quick look at my editing style, pacing,
-        transitions and visual storytelling.
-    </p>
-
-</div>
-
-
-<div class="showreel">
-
-    <!-- নিজের showreel video এখানে বসাও -->
-    <video
-    src="videos/showreel.mp4"
-    poster="images/showreel.jpg"
-    autoplay
-    muted
-    loop
-    playsinline>
-    </video>
-
-    <div class="video-overlay">
-        <div class="play">▶</div>
-    </div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="work">
-
-<div class="container">
-
-<div class="section-head">
-
-    <div>
-        <div class="section-number">02 / SELECTED WORK</div>
-        <h2 class="section-title">Selected Cuts.</h2>
-    </div>
-
-    <p class="section-description">
-        A collection of projects created for
-        creators, brands and modern businesses.
-    </p>
-
-</div>
-
-
-<div class="projects">
-
-    <div class="project">
-
-        <img
-        src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=85"
-        alt="Brand Film">
-
-        <div class="project-info">
-            <h3>Brand Film — NOVA</h3>
-            <p>Commercial / Cinematic Edit</p>
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <img
-        src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=85"
-        alt="Documentary">
-
-        <div class="project-info">
-            <h3>Inside The Frame</h3>
-            <p>Documentary / Storytelling</p>
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <img
-        src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=85"
-        alt="YouTube Video">
-
-        <div class="project-info">
-            <h3>Creator Series</h3>
-            <p>YouTube / Long Form</p>
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <img
-        src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=1200&q=85"
-        alt="Social Media">
-
-        <div class="project-info">
-            <h3>After Dark</h3>
-            <p>Social Media / Short Form</p>
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section id="services" class="services">
-
-<div class="container">
-
-<div class="section-head">
-
-    <div>
-        <div class="section-number">03 / SERVICES</div>
-        <h2 class="section-title">What I Do.</h2>
-    </div>
-
-</div>
-
-
-<div class="service">
-
-    <div class="service-number">01</div>
-
-    <h3>Video Editing</h3>
-
-    <p>
-        Clean cuts, pacing, sound design and storytelling
-        that keep viewers watching.
-    </p>
-
-</div>
-
-
-<div class="service">
-
-    <div class="service-number">02</div>
-
-    <h3>Color Grading</h3>
-
-    <p>
-        Cinematic color correction and grading to give
-        every frame the right atmosphere.
-    </p>
-
-</div>
-
-
-<div class="service">
-
-    <div class="service-number">03</div>
-
-    <h3>Motion Graphics</h3>
-
-    <p>
-        Modern titles, transitions, kinetic typography
-        and visual effects.
-    </p>
-
-</div>
-
-
-<div class="service">
-
-    <div class="service-number">04</div>
-
-    <h3>Short Form Content</h3>
-
-    <p>
-        High-retention Reels, Shorts and TikTok edits
-        designed for social platforms.
-    </p>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-<div class="container about-grid">
-
-    <div class="about-image">
-
-        <img
-        src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=900&q=85"
-        alt="Alex Morgan">
-
-    </div>
-
-
-    <div class="about-content">
-
-        <div class="section-number">
-            04 / ABOUT ME
-        </div>
-
-        <h2>
-            Behind<br>
-            <span>the edit.</span>
-        </h2>
+        <h3>
+            50<span>+</span>
+        </h3>
 
         <p>
-            I'm Alex, a video editor focused on creating
-            visually powerful content with clean editing,
-            intentional pacing and cinematic detail.
-            My goal is simple — make every second matter.
+            Creative Projects
         </p>
 
-        <div class="stats">
+    </div>
 
-            <div class="stat">
-                <strong>50+</strong>
-                <small>Projects</small>
+
+    <div class="stat">
+
+        <h3>
+            20<span>+</span>
+        </h3>
+
+        <p>
+            Happy Clients
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h3>
+            5<span>+</span>
+        </h3>
+
+        <p>
+            Design Skills
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h3>
+            100<span>%</span>
+        </h3>
+
+        <p>
+            Creative Passion
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section about" id="about">
+
+
+    <div class="section-heading">
+
+        <span>
+            01 — ABOUT ME
+        </span>
+
+        <h2>
+
+            Turning ideas into
+
+            <em>visual experiences.</em>
+
+        </h2>
+
+    </div>
+
+
+
+    <div class="about-grid">
+
+
+        <div class="about-text">
+
+
+            <p class="large-text">
+
+                Good design is not only about appearance.
+                It is about communication, emotion and purpose.
+
+            </p>
+
+
+            <p>
+
+                I'm <strong>Parananda Roy</strong>, a Professional
+                Graphics Designer passionate about creating clean,
+                meaningful and visually engaging designs.
+
+            </p>
+
+
+            <p>
+
+                I work with modern design principles to create
+                visual identities, social media graphics, logos,
+                print materials and other creative solutions.
+
+            </p>
+
+
+            <p>
+
+                My goal is simple — create designs that look
+                professional, communicate clearly and make
+                a lasting impression.
+
+            </p>
+
+
+            <a href="#contact" class="text-link">
+
+                Let's work together
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- SKILLS -->
+
+        <div class="skills">
+
+
+            <div class="skill">
+
+                <div class="skill-title">
+
+                    <span>
+                        Brand Identity
+                    </span>
+
+                    <strong>
+                        90%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <span style="width:90%"></span>
+
+                </div>
+
             </div>
 
-            <div class="stat">
-                <strong>3+</strong>
-                <small>Years Editing</small>
+
+
+            <div class="skill">
+
+                <div class="skill-title">
+
+                    <span>
+                        Social Media Design
+                    </span>
+
+                    <strong>
+                        95%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <span style="width:95%"></span>
+
+                </div>
+
             </div>
 
-            <div class="stat">
-                <strong>20+</strong>
-                <small>Happy Clients</small>
+
+
+            <div class="skill">
+
+                <div class="skill-title">
+
+                    <span>
+                        Logo Design
+                    </span>
+
+                    <strong>
+                        88%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <span style="width:88%"></span>
+
+                </div>
+
             </div>
+
+
+
+            <div class="skill">
+
+                <div class="skill-title">
+
+                    <span>
+                        Print Design
+                    </span>
+
+                    <strong>
+                        85%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <span style="width:85%"></span>
+
+                </div>
+
+            </div>
+
 
         </div>
 
     </div>
 
-</div>
 </section>
 
 
-<!-- ================= SKILLS ================= -->
 
-<section>
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
-<div class="container">
+<section class="services section" id="services">
 
-<div class="section-head">
 
-    <div>
-        <div class="section-number">05 / TOOLKIT</div>
-        <h2 class="section-title">My Toolkit.</h2>
+    <div class="section-heading">
+
+        <span>
+            02 — SERVICES
+        </span>
+
+        <h2>
+
+            What I can
+
+            <em>create for you.</em>
+
+        </h2>
+
     </div>
 
-</div>
 
 
-<div class="skills-grid">
+    <div class="services-grid">
 
-    <div class="skill">
-        <span>Adobe Premiere Pro</span>
-        <span>95%</span>
+
+        <!-- Service 01 -->
+
+        <div class="service-card">
+
+            <span class="service-number">
+                01
+            </span>
+
+            <i class="fa-solid fa-pen-nib"></i>
+
+            <h3>
+                Brand Identity
+            </h3>
+
+            <p>
+
+                Professional visual identities that
+                give brands a strong and memorable presence.
+
+            </p>
+
+            <a href="#contact">
+
+                Learn More
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- Service 02 -->
+
+        <div class="service-card featured">
+
+            <span class="service-number">
+                02
+            </span>
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <h3>
+                Social Media Design
+            </h3>
+
+            <p>
+
+                Modern social media graphics designed
+                to capture attention and increase engagement.
+
+            </p>
+
+            <a href="#contact">
+
+                Learn More
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- Service 03 -->
+
+        <div class="service-card">
+
+            <span class="service-number">
+                03
+            </span>
+
+            <i class="fa-solid fa-bezier-curve"></i>
+
+            <h3>
+                Logo Design
+            </h3>
+
+            <p>
+
+                Simple, unique and memorable logos
+                designed around your brand identity.
+
+            </p>
+
+            <a href="#contact">
+
+                Learn More
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- Service 04 -->
+
+        <div class="service-card">
+
+            <span class="service-number">
+                04
+            </span>
+
+            <i class="fa-solid fa-print"></i>
+
+            <h3>
+                Print Design
+            </h3>
+
+            <p>
+
+                Professional brochures, flyers,
+                business cards, invoices and more.
+
+            </p>
+
+            <a href="#contact">
+
+                Learn More
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
     </div>
 
-    <div class="skill">
-        <span>After Effects</span>
-        <span>90%</span>
-    </div>
-
-    <div class="skill">
-        <span>DaVinci Resolve</span>
-        <span>85%</span>
-    </div>
-
-    <div class="skill">
-        <span>Adobe Photoshop</span>
-        <span>88%</span>
-    </div>
-
-    <div class="skill">
-        <span>Motion Graphics</span>
-        <span>90%</span>
-    </div>
-
-    <div class="skill">
-        <span>Color Grading</span>
-        <span>92%</span>
-    </div>
-
-</div>
-
-</div>
 </section>
 
 
-<!-- ================= TESTIMONIAL ================= -->
 
-<section>
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
 
-<div class="container">
+<section class="section portfolio" id="portfolio">
 
-<div class="testimonial">
 
-    <div class="quote">
-        “Alex doesn't just edit videos —
-        he understands how to make people feel.”
+    <div class="portfolio-heading">
+
+
+        <div class="section-heading">
+
+            <span>
+                03 — SELECTED WORK
+            </span>
+
+            <h2>
+
+                Selected
+
+                <em>projects.</em>
+
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            A selection of creative projects
+            showcasing my design approach,
+            visual style and creativity.
+
+        </p>
+
+
     </div>
 
-    <div class="client">
-        — Daniel Carter / Creative Director
+
+
+    <div class="portfolio-grid">
+
+
+        <!-- PROJECT 01 -->
+
+        <div class="project project-large">
+
+            <div class="project-content">
+
+                <span>
+                    PROJECT 01
+                </span>
+
+                <h3>
+                    Brand Identity
+                </h3>
+
+                <p>
+                    Branding / Visual Identity
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROJECT 02 -->
+
+        <div class="project">
+
+            <div class="project-content">
+
+                <span>
+                    PROJECT 02
+                </span>
+
+                <h3>
+                    Social Campaign
+                </h3>
+
+                <p>
+                    Social Media Design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROJECT 03 -->
+
+        <div class="project">
+
+            <div class="project-content">
+
+                <span>
+                    PROJECT 03
+                </span>
+
+                <h3>
+                    Modern Logo
+                </h3>
+
+                <p>
+                    Logo Design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROJECT 04 -->
+
+        <div class="project project-large">
+
+            <div class="project-content">
+
+                <span>
+                    PROJECT 04
+                </span>
+
+                <h3>
+                    Creative Print
+                </h3>
+
+                <p>
+                    Print & Marketing Design
+                </p>
+
+            </div>
+
+        </div>
+
+
     </div>
 
-</div>
-
-</div>
 </section>
 
 
-<!-- ================= CONTACT ================= -->
 
-<section id="contact" class="contact">
+<!-- =====================================================
+     DESIGN PROCESS
+===================================================== -->
 
-<div class="container">
+<section class="section process">
 
-    <div class="section-number">
-        06 / CONTACT
-    </div>
 
-    <h2>
-        Let's make<br>
-        <span>something.</span>
-    </h2>
+    <div class="section-heading">
 
-    <p>
-        Have a project in mind? Let's turn your raw footage
-        into something people remember.
-    </p>
+        <span>
+            04 — MY PROCESS
+        </span>
 
-    <a href="mailto:hello@example.com"
-       class="btn btn-primary">
-        Start a Project ↗
-    </a>
+        <h2>
 
-    <div class="socials">
+            From idea to
 
-        <a href="#">Instagram</a>
-        <a href="#">Behance</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Fiverr</a>
+            <em>final design.</em>
+
+        </h2>
 
     </div>
 
-</div>
+
+
+    <div class="process-grid">
+
+
+        <div class="process-item">
+
+            <span>
+                01
+            </span>
+
+            <h3>
+                Discover
+            </h3>
+
+            <p>
+
+                Understanding your goals,
+                audience and design requirements.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="process-item">
+
+            <span>
+                02
+            </span>
+
+            <h3>
+                Explore
+            </h3>
+
+            <p>
+
+                Researching ideas and exploring
+                creative visual directions.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="process-item">
+
+            <span>
+                03
+            </span>
+
+            <h3>
+                Design
+            </h3>
+
+            <p>
+
+                Turning the selected concept
+                into a polished visual solution.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="process-item">
+
+            <span>
+                04
+            </span>
+
+            <h3>
+                Deliver
+            </h3>
+
+            <p>
+
+                Finalizing details and delivering
+                professional high-quality files.
+
+            </p>
+
+        </div>
+
+
+    </div>
 
 </section>
 
-</main>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
-<footer>
+<section class="contact-section" id="contact">
 
-<div class="container footer-inner">
 
-    <div>© 2026 Alex Morgan</div>
+    <div class="contact-content">
 
-    <div>Video Editor / Visual Storyteller</div>
 
-</div>
+        <span class="contact-label">
+
+            05 — LET'S CONNECT
+
+        </span>
+
+
+        <h2>
+
+            Have a project
+
+            <em>in mind?</em>
+
+        </h2>
+
+
+        <p>
+
+            Let's turn your idea into something
+            visually remarkable.
+
+        </p>
+
+
+        <a
+            href="mailto:yourmail@example.com"
+            class="contact-btn"
+        >
+
+            Start a Conversation
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+
+    </div>
+
+
+
+    <div class="contact-details">
+
+
+        <div>
+
+            <span>
+                EMAIL
+            </span>
+
+            <a href="mailto:yourmail@example.com">
+
+                yourmail@example.com
+
+            </a>
+
+        </div>
+
+
+
+        <div>
+
+            <span>
+                LOCATION
+            </span>
+
+            <p>
+                Bangladesh
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <span>
+                STATUS
+            </span>
+
+            <p class="available-text">
+
+                Available for Projects
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+
+            <a href="#home" class="logo">
+
+                <span>P</span>arananda<span>.</span>
+
+            </a>
+
+
+            <p>
+
+                Professional Graphics Designer
+                creating meaningful and memorable
+                visual experiences.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#portfolio">
+                Portfolio
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+
+        <p>
+
+            © 2026 Parananda Roy.
+            All Rights Reserved.
+
+        </p>
+
+
+        <div>
+
+            <a href="#">
+                Behance
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+        </div>
+
+
+    </div>
 
 </footer>
 
 
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* MOBILE MENU */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("show");
+
+});
+
+
+
+/* CLOSE MOBILE MENU */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("show");
+
+        });
+
+    });
+
+
+
+/* ACTIVE NAVIGATION */
+
+const sections =
+    document.querySelectorAll("section");
+
+const navigationLinks =
+    document.querySelectorAll(".nav-links a");
+
+
+window.addEventListener("scroll", () => {
+
+
+    let current = "";
+
+
+    sections.forEach(section => {
+
+        const sectionTop =
+            section.offsetTop - 180;
+
+
+        if (window.scrollY >= sectionTop) {
+
+            current =
+                section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navigationLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+
+        if (
+            link.getAttribute("href") ===
+            "#" + current
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+</script>
+
+
 </body>
+
 </html>
