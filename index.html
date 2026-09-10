@@ -1,1271 +1,778 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="bn" class="scroll-smooth">
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Parananda Roy | Professional Graphics Designer</title>
-
-    <meta
-        name="description"
-        content="Parananda Roy is a Professional Graphics Designer specializing in branding, logo design, social media design and creative visual solutions."
-    >
-
-    <meta
-        name="keywords"
-        content="Parananda Roy, Graphic Designer, Professional Graphic Designer, Logo Designer, Branding Designer, Social Media Designer"
-    >
-
-    <meta name="author" content="Parananda Roy">
-
-
-    <!-- Google Fonts -->
-
+    <title>Parananda Roy | Senior Visual & Graphics Designer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Outfit & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f3ff',
+                            100: '#e1e7fe',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            accent: '#ff4655'
+                        },
+                        dark: {
+                            900: '#0b0f19',
+                            800: '#111827',
+                            700: '#1f2937',
+                            600: '#374151'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-
-    <!-- Font Awesome -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
-
-    <!-- CSS -->
-
-    <link rel="stylesheet" href="css/style.css">
-
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+        }
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #ff4655 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.25);
+        }
+        .glow-effect {
+            position: relative;
+        }
+        .glow-effect::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #6366f1, #ff4655, #4f46e5);
+            border-radius: inherit;
+            z-index: -1;
+            filter: blur(15px);
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+        .glow-effect:hover::before {
+            opacity: 0.7;
+        }
+    </style>
 </head>
+<body class="selection:bg-brand-500 selection:text-white">
 
-
-<body>
-
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
-<header class="header">
-
-    <nav class="navbar">
-
-        <a href="#home" class="logo">
-
-            <span>P</span>arananda<span>.</span>
-
-        </a>
-
-
-        <div class="nav-links" id="navLinks">
-
-            <a href="#home" class="active">
-                Home
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center font-display font-black text-xl text-white shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    PR
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-lg tracking-wide text-white group-hover:text-brand-500 transition-colors">PARANANDA ROY</span>
+                    <span class="text-xs text-gray-400 font-medium tracking-wider uppercase">Graphics Designer</span>
+                </div>
             </a>
 
-            <a href="#about">
-                About
-            </a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-sm font-medium text-gray-300 hover:text-brand-500 transition-colors">About Me</a>
+                <a href="#skills" class="text-sm font-medium text-gray-300 hover:text-brand-500 transition-colors">Skills</a>
+                <a href="#portfolio" class="text-sm font-medium text-gray-300 hover:text-brand-500 transition-colors">Portfolio</a>
+                <a href="#services" class="text-sm font-medium text-gray-300 hover:text-brand-500 transition-colors">Services</a>
+                <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-brand-500 transition-colors">Contact</a>
+            </nav>
 
-            <a href="#services">
-                Services
-            </a>
+            <!-- Hire CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contact" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-brand-600 to-brand-accent text-white font-medium text-sm hover:shadow-lg hover:shadow-brand-500/30 transition-all transform hover:-translate-y-0.5">
+                    Hire Me Now <i class="fa-solid font-xs fa-arrow-right ml-1"></i>
+                </a>
+            </div>
 
-            <a href="#portfolio">
-                Portfolio
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
         </div>
 
-
-        <a href="#contact" class="nav-button">
-
-            Let's Talk
-
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-        </a>
-
-
-        <button class="menu-btn" id="menuBtn">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-    </nav>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero" id="home">
-
-
-    <div class="hero-content">
-
-
-        <div class="available">
-
-            <span></span>
-
-            Available for freelance work
-
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-white/10 px-4 pt-4 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-brand-500 text-base font-medium">About Me</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-brand-500 text-base font-medium">Skills</a>
+            <a href="#portfolio" class="block py-2 text-gray-300 hover:text-brand-500 text-base font-medium">Portfolio</a>
+            <a href="#services" class="block py-2 text-gray-300 hover:text-brand-500 text-base font-medium">Services</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-brand-500 text-base font-medium">Contact</a>
+            <a href="#contact" class="inline-block mt-2 w-full text-center px-6 py-3 rounded-xl bg-brand-600 text-white font-medium">Hire Me Now</a>
         </div>
-
-
-        <p class="hero-small-title">
-
-            HELLO, I'M PARANANDA ROY
-
-        </p>
-
-
-        <h1>
-
-            Professional
-
-            <span>Graphics</span>
-
-            Designer
-
-        </h1>
-
-
-        <p class="hero-description">
-
-            I create clean, modern and memorable visual experiences
-            that help brands communicate with confidence.
-
-        </p>
-
-
-        <div class="hero-buttons">
-
-
-            <a href="#portfolio" class="primary-btn">
-
-                View My Work
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-
-            <a href="#contact" class="secondary-btn">
-
-                Contact Me
-
-            </a>
-
-
-        </div>
-
-
-        <div class="socials">
-
-
-            <a href="#" aria-label="Behance">
-
-                <i class="fa-brands fa-behance"></i>
-
-            </a>
-
-
-            <a href="#" aria-label="Dribbble">
-
-                <i class="fa-brands fa-dribbble"></i>
-
-            </a>
-
-
-            <a href="#" aria-label="Instagram">
-
-                <i class="fa-brands fa-instagram"></i>
-
-            </a>
-
-
-            <a href="#" aria-label="Facebook">
-
-                <i class="fa-brands fa-facebook-f"></i>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-
-
-    <!-- HERO IMAGE -->
-
-    <div class="hero-image">
-
-
-        <div class="image-outline"></div>
-
-
-        <div class="profile-card">
-
-
-            <img
-                src="photo/profile.jpg"
-                alt="Parananda Roy - Professional Graphics Designer"
-            >
-
-
-            <div class="image-overlay">
-
-                <div class="overlay-text">
-
-                    <span>CREATIVE</span>
-
-                    <strong>DESIGNER</strong>
-
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <!-- Background Ambient Lights -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-brand-accent/15 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Bio & Intro -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Available For Freelance & Full-time Projects
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-display font-extrabold tracking-tight leading-none text-white">
+                        Hi, I'm <span class="gradient-text">Parananda Roy</span>
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl font-medium text-gray-300">
+                        Senior Creative Visual & Graphics Designer
+                    </p>
+
+                    <p class="text-gray-400 max-w-2xl text-base sm:text-lg leading-relaxed">
+                        আমি আপনার ব্র্যান্ডের গল্পকে ভিজ্যুয়াল আর্টে রূপান্তর করি। লোগো ব্র্যান্ডিং, সোশ্যাল মিডিয়া গ্রাফিক্স, প্রমোশনাল ব্যানার এবং প্রিমিয়াম প্যাকেজিং ডিজাইনে অনন্য ও আধুনিক ক্রিয়েটিভ এক্সপেরিয়েন্স নিশ্চিত করি।
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#portfolio" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-semibold text-base shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-1 transition-all">
+                            Explore My Work <i class="fa-solid fa-arrow-down ml-2"></i>
+                        </a>
+                        <a href="#contact" class="px-8 py-4 rounded-xl bg-dark-800 hover:bg-dark-700 text-white font-semibold text-base border border-white/10 hover:border-brand-500/50 transition-all">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    <!-- Counter Badges -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-white/10 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-display font-bold text-white">5+ Years</p>
+                            <p class="text-xs sm:text-sm text-gray-400">Design Experience</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-display font-bold text-white">350+</p>
+                            <p class="text-xs sm:text-sm text-gray-400">Projects Done</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-display font-bold text-white">100%</p>
+                            <p class="text-xs sm:text-sm text-gray-400">Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Local Photo Container -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md glow-effect rounded-3xl p-2 bg-gradient-to-b from-white/10 to-transparent">
+                        <div class="relative rounded-2xl overflow-hidden bg-dark-800 border border-white/10 aspect-[4/5] flex items-center justify-center">
+                            
+                            <!-- PRIMARY USER IMAGE: Points to local file C:\my portfolio\photo.jpg -->
+                            <!-- Fallback provided via onerror JavaScript to ensure clean presentation if file path is altered -->
+                            <img id="user-photo" 
+                                 src="file:///C:/my portfolio/photo.jpg" 
+                                 alt="Parananda Roy - Graphics Designer" 
+                                 class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';">
+
+                            <!-- Floating badge over photo -->
+                            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl glass-card backdrop-blur-md flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-lg">
+                                    <i class="fa-solid fa-bezier-curve"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-white">Brand & Visual Specialist</p>
+                                    <p class="text-xs text-gray-400">Adobe Creative Suite Master</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-
         </div>
-
-
-        <!-- Floating Card -->
-
-        <div class="floating-card creative-card">
-
-            <div class="floating-icon">
-
-                <i class="fa-solid fa-pen-nib"></i>
-
-            </div>
-
-
-            <div>
-
-                <strong>Creative Mind</strong>
-
-                <small>Design • Branding • Visuals</small>
-
-            </div>
-
-        </div>
-
-
-        <div class="floating-card experience-card">
-
-            <strong>PR</strong>
-
-            <div>
-
-                <small>GRAPHIC DESIGN</small>
-
-                <span>Portfolio</span>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     STATS
-===================================================== -->
-
-<section class="stats">
-
-
-    <div class="stat">
-
-        <h3>
-            50<span>+</span>
-        </h3>
-
-        <p>
-            Creative Projects
-        </p>
-
-    </div>
-
-
-    <div class="stat">
-
-        <h3>
-            20<span>+</span>
-        </h3>
-
-        <p>
-            Happy Clients
-        </p>
-
-    </div>
-
-
-    <div class="stat">
-
-        <h3>
-            5<span>+</span>
-        </h3>
-
-        <p>
-            Design Skills
-        </p>
-
-    </div>
-
-
-    <div class="stat">
-
-        <h3>
-            100<span>%</span>
-        </h3>
-
-        <p>
-            Creative Passion
-        </p>
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section class="section about" id="about">
-
-
-    <div class="section-heading">
-
-        <span>
-            01 — ABOUT ME
-        </span>
-
-        <h2>
-
-            Turning ideas into
-
-            <em>visual experiences.</em>
-
-        </h2>
-
-    </div>
-
-
-
-    <div class="about-grid">
-
-
-        <div class="about-text">
-
-
-            <p class="large-text">
-
-                Good design is not only about appearance.
-                It is about communication, emotion and purpose.
-
-            </p>
-
-
-            <p>
-
-                I'm <strong>Parananda Roy</strong>, a Professional
-                Graphics Designer passionate about creating clean,
-                meaningful and visually engaging designs.
-
-            </p>
-
-
-            <p>
-
-                I work with modern design principles to create
-                visual identities, social media graphics, logos,
-                print materials and other creative solutions.
-
-            </p>
-
-
-            <p>
-
-                My goal is simple — create designs that look
-                professional, communicate clearly and make
-                a lasting impression.
-
-            </p>
-
-
-            <a href="#contact" class="text-link">
-
-                Let's work together
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-
-        </div>
-
-
-
-        <!-- SKILLS -->
-
-        <div class="skills">
-
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        Brand Identity
-                    </span>
-
-                    <strong>
-                        90%
-                    </strong>
-
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-20 bg-dark-800/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="p-1 rounded-2xl bg-gradient-to-br from-brand-600/30 to-brand-accent/20">
+                        <div class="p-6 sm:p-8 rounded-xl bg-dark-900 space-y-6">
+                            <h3 class="text-2xl font-display font-bold text-white">আমার কাজের মূল দর্শন</h3>
+                            <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+                                "ডিজাইন শুধু সুন্দর দেখানোর বিষয় নয়, এটি সমস্যা সমাধানের একটি শক্তিশালী মাধ্যম।" প্রতিটি ক্লায়েন্টের ব্যবসার লক্ষ্য বুঝে ইউনিক ডিজাইন সলিউশন প্রদান করাই আমার প্রধান উদ্দেশ্য।
+                            </p>
+
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3 text-sm text-gray-300">
+                                    <i class="fa-solid fa-circle-check text-brand-500"></i>
+                                    <span>ইউনিক ও মডার্ন ভিজ্যুয়াল কনসেপ্ট</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-300">
+                                    <i class="fa-solid fa-circle-check text-brand-500"></i>
+                                    <span>হাই-রেজুলেশন ও প্রিন্ট-রেডি ফাইল গ্যারান্টি</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-300">
+                                    <i class="fa-solid fa-circle-check text-brand-500"></i>
+                                    <span>সঠিক সময়ে ডেডলাইন অনুযায়ী প্রজেক্ট ডেলিভারি</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-300">
+                                    <i class="fa-solid fa-circle-check text-brand-500"></i>
+                                    <span>ক্লায়েন্ট সন্তুষ্টির জন্য আনলিমিটেড রিভিশন</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-brand-500 font-semibold text-sm uppercase tracking-wider">About Parananda Roy</span>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
+                        আপনার ব্র্যান্ডকে সাধারণ থেকে অসাধারণ রূপ দিতে সাহায্য করছি
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        আমি পরানন্দ রায়, একজন প্রফেশনাল ও প্যাশনেট গ্রাফিক্স ডিজাইনার। দীর্ঘ ৫ বছরেরও বেশি সময় ধরে জাতীয় ও আন্তর্জাতিক বিভিন্ন ব্র্যান্ড, কর্পোরেট এজেন্সি এবং স্টার্টআপের জন্য লোগো ডিজাইন, ব্র্যান্ডিং, সোশাল মিডিয়া প্রমোশনাল আর্টওয়ার্ক, প্যাকেজিং ও প্রিন্ট মিডিয়ার কাজ সফলতার সাথে করে আসছি।
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+                        নতুন আইডিয়া জেনারেট করা এবং নিখুঁত পিক্সেল ডিজাইনের মাধ্যমে যেকোনো মেসেজকে সহজভাবে দর্শকের কাছে পৌঁছে দিতে আমি স্বাচ্ছন্দ্যবোধ করি।
+                    </p>
 
-                <div class="progress">
-
-                    <span style="width:90%"></span>
-
+                    <div class="pt-4 grid grid-cols-2 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl glass-card">
+                            <i class="fa-solid fa-wand-magic-sparkles text-2xl text-brand-500 mb-2"></i>
+                            <h4 class="font-bold text-white">Creative Identity</h4>
+                            <p class="text-xs text-gray-400 mt-1">মডার্ন ও কালারফুল ব্র্যান্ড গাইডলাইন</p>
+                        </div>
+                        <div class="p-4 rounded-xl glass-card">
+                            <i class="fa-solid fa-bullhorn text-2xl text-brand-accent mb-2"></i>
+                            <h4 class="font-bold text-white">Marketing Graphics</h4>
+                            <p class="text-xs text-gray-400 mt-1">হাই-কনভার্টিং সোশাল মিডিয়া এডস</p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+        </div>
+    </section>
 
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-500 font-semibold text-sm uppercase tracking-wider">Software & Expertise</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-bold text-white">আমার টেকনিক্যাল স্কিলসমূহ</h2>
+                <p class="text-gray-400 text-sm sm:text-base">ডিজাইন জগতের বিশ্বসেরা সফটওয়্যার ব্যবহারে আমার অভিজ্ঞতা ও দক্ষতা</p>
+            </div>
 
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        Social Media Design
-                    </span>
-
-                    <strong>
-                        95%
-                    </strong>
-
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Photoshop -->
+                <div class="p-6 rounded-2xl glass-card hover:-translate-y-2 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-2xl mb-4">
+                        Ps
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Adobe Photoshop</h3>
+                    <p class="text-xs text-gray-400 mb-4">Photo Manipulation, Banner Design, Photo Retouching & Compositing</p>
+                    <div class="w-full bg-dark-700 h-2 rounded-full overflow-hidden">
+                        <div class="bg-blue-500 h-full rounded-full" style="width: 95%;"></div>
+                    </div>
+                    <span class="text-xs font-semibold text-gray-300 mt-2 inline-block">95% Efficiency</span>
                 </div>
 
+                <!-- Illustrator -->
+                <div class="p-6 rounded-2xl glass-card hover:-translate-y-2 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold text-2xl mb-4">
+                        Ai
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Adobe Illustrator</h3>
+                    <p class="text-xs text-gray-400 mb-4">Vector Illustration, Logo Design, Branding, Flyer & Packaging</p>
+                    <div class="w-full bg-dark-700 h-2 rounded-full overflow-hidden">
+                        <div class="bg-amber-500 h-full rounded-full" style="width: 98%;"></div>
+                    </div>
+                    <span class="text-xs font-semibold text-gray-300 mt-2 inline-block">98% Efficiency</span>
+                </div>
 
-                <div class="progress">
+                <!-- InDesign -->
+                <div class="p-6 rounded-2xl glass-card hover:-translate-y-2 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-2xl mb-4">
+                        Id
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Adobe InDesign</h3>
+                    <p class="text-xs text-gray-400 mb-4">Brochures, Catalog Layouts, Magazines, eBooks & Multi-page Print</p>
+                    <div class="w-full bg-dark-700 h-2 rounded-full overflow-hidden">
+                        <div class="bg-pink-500 h-full rounded-full" style="width: 88%;"></div>
+                    </div>
+                    <span class="text-xs font-semibold text-gray-300 mt-2 inline-block">88% Efficiency</span>
+                </div>
 
-                    <span style="width:95%"></span>
+                <!-- Figma -->
+                <div class="p-6 rounded-2xl glass-card hover:-translate-y-2 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-2xl mb-4">
+                        Fg
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Figma & UI Graphics</h3>
+                    <p class="text-xs text-gray-400 mb-4">UI/UX Web Layouts, App Banners, Social Kit & Wireframing</p>
+                    <div class="w-full bg-dark-700 h-2 rounded-full overflow-hidden">
+                        <div class="bg-purple-500 h-full rounded-full" style="width: 85%;"></div>
+                    </div>
+                    <span class="text-xs font-semibold text-gray-300 mt-2 inline-block">85% Efficiency</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- PORTFOLIO SHOWCASE SECTION -->
+    <section id="portfolio" class="py-20 bg-dark-800/30 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-brand-500 font-semibold text-sm uppercase tracking-wider">Portfolio Gallery</span>
+                    <h2 class="text-3xl sm:text-5xl font-display font-bold text-white">আমার সেরা প্রজেক্টসমূহ</h2>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap gap-2 bg-dark-800 p-1.5 rounded-2xl border border-white/10 self-start md:self-auto">
+                    <button class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white" data-filter="all">All Projects</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition-all" data-filter="brand">Brand Identity</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition-all" data-filter="social">Social Media</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition-all" data-filter="packaging">Packaging</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                
+                <!-- Project 1 -->
+                <div class="portfolio-item brand group relative rounded-2xl overflow-hidden glass-card">
+                    <div class="aspect-[4/3] overflow-hidden bg-dark-900">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Brand Identity Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-500">Brand Identity</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Apex Minimalist Logo Concept</h4>
+                        <p class="text-xs text-gray-300 mt-2">কমপ্লিট ব্র্যান্ড গাইডলাইন ও ভেক্টর ভিজ্যুয়ালস</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item social group relative rounded-2xl overflow-hidden glass-card">
+                    <div class="aspect-[4/3] overflow-hidden bg-dark-900">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Social Media Banner" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-accent">Social Media</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Cyberpunk Campaign Banners</h4>
+                        <p class="text-xs text-gray-300 mt-2">সোশ্যাল মিডিয়া বিজ্ঞাপন ও প্রমোশনাল পোস্টার</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item packaging group relative rounded-2xl overflow-hidden glass-card">
+                    <div class="aspect-[4/3] overflow-hidden bg-dark-900">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Packaging Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Packaging</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Luxury Organic Tea Box</h4>
+                        <p class="text-xs text-gray-300 mt-2">প্রিমিয়াম বক্স লাবেল ও ড্রাই মেটেরিয়াল ডিজাইন</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item brand group relative rounded-2xl overflow-hidden glass-card">
+                    <div class="aspect-[4/3] overflow-hidden bg-dark-900">
+                        <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" alt="Corporate Typography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-500">Brand Identity</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Urban Style Stationery Kit</h4>
+                        <p class="text-xs text-gray-300 mt-2">কর্পোরেট ভিজিটিং কার্ড ও প্যাড লেআউট</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item social group relative rounded-2xl overflow-hidden glass-card">
+                    <div class="aspect-[4/3] overflow-hidden bg-dark-900">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31b272c365?auto=format&fit=crop&w=800&q=80" alt="Digital Marketing Ad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-accent">Social Media</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Tech Conference Flyer</h4>
+                        <p class="text-xs text-gray-300 mt-2">ইভেন্ট প্রমোশন ও ওয়েব ব্যানার আর্ট</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item packaging group relative rounded-2xl overflow-hidden glass-card">
+                    <div class="aspect-[4/3] overflow-hidden bg-dark-900">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Product Label" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Packaging</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Minimalist Bottle Design</h4>
+                        <p class="text-xs text-gray-300 mt-2">কসমোটিক ও বেভারেজ ক্যান লেবেলিং</p>
+                    </div>
                 </div>
 
             </div>
+        </div>
+    </section>
 
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-500 font-semibold text-sm uppercase tracking-wider">My Services</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-bold text-white">আমি যেসকল সেবা প্রদান করি</h2>
+                <p class="text-gray-400 text-sm sm:text-base">আপনার ব্র্যান্ডকে নতুন মাত্রায় নিয়ে যেতে উচ্চমানের গ্রাফিক সমাধান</p>
+            </div>
 
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        Logo Design
-                    </span>
-
-                    <strong>
-                        88%
-                    </strong>
-
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="p-8 rounded-2xl glass-card space-y-4 hover:border-brand-500/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Logo & Brand Identity</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        আপনার ব্যবসাকে একটি স্থায়ী পরিচিতি দিতে আধুনিক লোগো, কালার প্যালেট, টাইপোগ্রাফি ও ভিজিটিং কার্ডসহ ফুল ব্র্যান্ড বুক গাইডলাইন।
+                    </p>
                 </div>
 
+                <!-- Service 2 -->
+                <div class="p-8 rounded-2xl glass-card space-y-4 hover:border-brand-500/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-accent/10 text-brand-accent flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-hashtag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Social Media Kit</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        ফেসবুক, ইন্সটাগ্রাম ও কাস্টম এডভারটাইজিংয়ের জন্য আকর্ষনীয় ব্যানার, কভার ফটো, ক্যারোসল পোস্ট এবং অ্যাড ডিজাইন।
+                    </p>
+                </div>
 
-                <div class="progress">
+                <!-- Service 3 -->
+                <div class="p-8 rounded-2xl glass-card space-y-4 hover:border-brand-500/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Packaging & Label Design</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        পণ্য সামগ্রীর জন্য বিশ্বমানের থ্রিডি মকআপসহ ৩D বক্স লেবেল, পাউচ, বোতল এবং স্টিকার প্যাকেজিং আর্টওয়ার্ক।
+                    </p>
+                </div>
 
-                    <span style="width:88%"></span>
+                <!-- Service 4 -->
+                <div class="p-8 rounded-2xl glass-card space-y-4 hover:border-brand-500/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Print Media & Marketing</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        ফ্লায়ার, ব্রোশার, পোস্টার, বিলবোর্ড এবং ম্যাগাজিনের জন্য হাই-রেজুলেশন প্রিন্ট-রেডি সিএমওয়াইকে (CMYK) লেআউট।
+                    </p>
+                </div>
 
+                <!-- Service 5 -->
+                <div class="p-8 rounded-2xl glass-card space-y-4 hover:border-brand-500/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">UI/UX Web Graphics</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        ওয়েবসাইট ও মোবাইল অ্যাপ্লিকেশনের ইন্টারেক্টিভ ইউআই প্রোটোটাইপ, ভেক্টর আইকন এবং ওয়েবসাইট হিরো সেকশন আর্টওয়ার্ক।
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="p-8 rounded-2xl glass-card space-y-4 hover:border-brand-500/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Photo Manipulation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        জটিল ফটো রিটাচিং, ব্যাকগ্রাউন্ড রিমুভাল, কালার গ্রেডিং এবং অ্যাডভান্সড ডিজিটাল ম্যানিপুলেশন আর্ট।
+                    </p>
                 </div>
 
             </div>
+        </div>
+    </section>
 
+    <!-- TESTIMONIALS SECTION -->
+    <section class="py-20 bg-dark-800/40 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-500 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">ক্লায়েন্টদের প্রতিক্রিয়া</h2>
+            </div>
 
-
-            <div class="skill">
-
-                <div class="skill-title">
-
-                    <span>
-                        Print Design
-                    </span>
-
-                    <strong>
-                        85%
-                    </strong>
-
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl glass-card space-y-4">
+                    <div class="flex text-amber-400 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        "Parananda Roy created our brand identity from scratch. His speed and creativity exceeded our expectations. Truly a professional designer!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center font-bold text-white">JS</div>
+                        <div>
+                            <h5 class="text-sm font-bold text-white">John Smith</h5>
+                            <p class="text-xs text-gray-400">CEO, TechNova Inc.</p>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="p-6 rounded-2xl glass-card space-y-4">
+                    <div class="flex text-amber-400 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        "পরানন্দ ভাইয়ের লোগো ও সোশ্যাল মিডিয়া ডিজাইনের দক্ষতা অসাধারণ। কাজের কোয়ালিটি এবং ফ্রেন্ডলি কমিউনিকেশন সব মিলিয়ে ৫ স্টারের কাজের সুযোগ পেয়েছি।"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center font-bold text-white">AH</div>
+                        <div>
+                            <h5 class="text-sm font-bold text-white">Anwar Hossain</h5>
+                            <p class="text-xs text-gray-400">Founder, E-Shop BD</p>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="progress">
+                <div class="p-6 rounded-2xl glass-card space-y-4">
+                    <div class="flex text-amber-400 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        "Best designer I've worked with. The packaging artwork received compliments from all our distributors. Highly recommended!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-white">EL</div>
+                        <div>
+                            <h5 class="text-sm font-bold text-white">Emily Lu</h5>
+                            <p class="text-xs text-gray-400">Product Manager, BioCare</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <span style="width:85%"></span>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-brand-500 font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
+                        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-2">চলুন আপনার প্রজেক্ট নিয়ে আলোচনা করি</h2>
+                        <p class="text-gray-400 text-sm sm:text-base mt-4">
+                            আপনার কি কোনো নতুন প্রজেক্ট বা ব্র্যান্ডিং ডিজাইন প্রয়োজন? সরাসরি মেসেজ পাঠান বা নিচের মাধ্যমে যোগাযোগ করুন।
+                        </p>
+                    </div>
 
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase font-semibold">Email Me</p>
+                                <a href="mailto:paranandaroy@example.com" class="text-white font-medium hover:text-brand-500 transition-colors">paranandaroy.designer@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase font-semibold">Call / WhatsApp</p>
+                                <a href="tel:+8801700000000" class="text-white font-medium hover:text-brand-accent transition-colors">+880 1700-000000</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase font-semibold">Location</p>
+                                <p class="text-white font-medium">Mymensingh, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="pt-4">
+                        <p class="text-sm font-semibold text-gray-300 mb-3">Follow My Creative Work:</p>
+                        <div class="flex items-center gap-3">
+                            <a href="#" class="w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-brand-600 transition-all"><i class="fa-brands fa-behance"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-pink-600 transition-all"><i class="fa-brands fa-dribbble"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-500 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Form -->
+                <div class="lg:col-span-7">
+                    <div class="p-8 rounded-3xl glass-card">
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Your Name</label>
+                                    <input type="text" required placeholder="পরানন্দ রায়" class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/10 text-white focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Your Email</label>
+                                    <input type="email" required placeholder="yourname@gmail.com" class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/10 text-white focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Project Category</label>
+                                <select class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/10 text-gray-300 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                                    <option>Logo & Brand Identity</option>
+                                    <option>Social Media Banner & Ads</option>
+                                    <option>Packaging & Box Design</option>
+                                    <option>Print & Flyer Layout</option>
+                                    <option>UI/UX Design</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Message Detail</label>
+                                <textarea rows="5" required placeholder="আপনার প্রজেক্টের বিস্তারিত এখানে লিখুন..." class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/10 text-white focus:outline-none focus:border-brand-500 transition-colors text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-bold text-base shadow-lg hover:shadow-brand-500/30 transition-all">
+                                Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+
+                            <div id="form-response" class="hidden p-4 rounded-xl bg-emerald-500/20 text-emerald-400 text-sm text-center font-medium">
+                                ধন্যবাদ! আপনার বার্তাটি সফলভাবে পাঠানো হয়েছে। আমি দ্রুত আপনার সাথে যোগাযোগ করব।
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
             </div>
-
-
         </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     SERVICES
-===================================================== -->
-
-<section class="services section" id="services">
-
-
-    <div class="section-heading">
-
-        <span>
-            02 — SERVICES
-        </span>
-
-        <h2>
-
-            What I can
-
-            <em>create for you.</em>
-
-        </h2>
-
-    </div>
-
-
-
-    <div class="services-grid">
-
-
-        <!-- Service 01 -->
-
-        <div class="service-card">
-
-            <span class="service-number">
-                01
-            </span>
-
-            <i class="fa-solid fa-pen-nib"></i>
-
-            <h3>
-                Brand Identity
-            </h3>
-
-            <p>
-
-                Professional visual identities that
-                give brands a strong and memorable presence.
-
-            </p>
-
-            <a href="#contact">
-
-                Learn More
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-
-
-        <!-- Service 02 -->
-
-        <div class="service-card featured">
-
-            <span class="service-number">
-                02
-            </span>
-
-            <i class="fa-solid fa-layer-group"></i>
-
-            <h3>
-                Social Media Design
-            </h3>
-
-            <p>
-
-                Modern social media graphics designed
-                to capture attention and increase engagement.
-
-            </p>
-
-            <a href="#contact">
-
-                Learn More
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-
-
-        <!-- Service 03 -->
-
-        <div class="service-card">
-
-            <span class="service-number">
-                03
-            </span>
-
-            <i class="fa-solid fa-bezier-curve"></i>
-
-            <h3>
-                Logo Design
-            </h3>
-
-            <p>
-
-                Simple, unique and memorable logos
-                designed around your brand identity.
-
-            </p>
-
-            <a href="#contact">
-
-                Learn More
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-
-
-        <!-- Service 04 -->
-
-        <div class="service-card">
-
-            <span class="service-number">
-                04
-            </span>
-
-            <i class="fa-solid fa-print"></i>
-
-            <h3>
-                Print Design
-            </h3>
-
-            <p>
-
-                Professional brochures, flyers,
-                business cards, invoices and more.
-
-            </p>
-
-            <a href="#contact">
-
-                Learn More
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PORTFOLIO
-===================================================== -->
-
-<section class="section portfolio" id="portfolio">
-
-
-    <div class="portfolio-heading">
-
-
-        <div class="section-heading">
-
-            <span>
-                03 — SELECTED WORK
-            </span>
-
-            <h2>
-
-                Selected
-
-                <em>projects.</em>
-
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            A selection of creative projects
-            showcasing my design approach,
-            visual style and creativity.
-
-        </p>
-
-
-    </div>
-
-
-
-    <div class="portfolio-grid">
-
-
-        <!-- PROJECT 01 -->
-
-        <div class="project project-large">
-
-            <div class="project-content">
-
-                <span>
-                    PROJECT 01
-                </span>
-
-                <h3>
-                    Brand Identity
-                </h3>
-
-                <p>
-                    Branding / Visual Identity
-                </p>
-
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-dark-900 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center font-bold text-white text-sm">PR</div>
+                <p class="text-xs text-gray-400">© 2026 <span class="text-white font-semibold">Parananda Roy</span>. All Rights Reserved.</p>
             </div>
-
-        </div>
-
-
-
-        <!-- PROJECT 02 -->
-
-        <div class="project">
-
-            <div class="project-content">
-
-                <span>
-                    PROJECT 02
-                </span>
-
-                <h3>
-                    Social Campaign
-                </h3>
-
-                <p>
-                    Social Media Design
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PROJECT 03 -->
-
-        <div class="project">
-
-            <div class="project-content">
-
-                <span>
-                    PROJECT 03
-                </span>
-
-                <h3>
-                    Modern Logo
-                </h3>
-
-                <p>
-                    Logo Design
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PROJECT 04 -->
-
-        <div class="project project-large">
-
-            <div class="project-content">
-
-                <span>
-                    PROJECT 04
-                </span>
-
-                <h3>
-                    Creative Print
-                </h3>
-
-                <p>
-                    Print & Marketing Design
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     DESIGN PROCESS
-===================================================== -->
-
-<section class="section process">
-
-
-    <div class="section-heading">
-
-        <span>
-            04 — MY PROCESS
-        </span>
-
-        <h2>
-
-            From idea to
-
-            <em>final design.</em>
-
-        </h2>
-
-    </div>
-
-
-
-    <div class="process-grid">
-
-
-        <div class="process-item">
-
-            <span>
-                01
-            </span>
-
-            <h3>
-                Discover
-            </h3>
-
-            <p>
-
-                Understanding your goals,
-                audience and design requirements.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="process-item">
-
-            <span>
-                02
-            </span>
-
-            <h3>
-                Explore
-            </h3>
-
-            <p>
-
-                Researching ideas and exploring
-                creative visual directions.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="process-item">
-
-            <span>
-                03
-            </span>
-
-            <h3>
-                Design
-            </h3>
-
-            <p>
-
-                Turning the selected concept
-                into a polished visual solution.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="process-item">
-
-            <span>
-                04
-            </span>
-
-            <h3>
-                Deliver
-            </h3>
-
-            <p>
-
-                Finalizing details and delivering
-                professional high-quality files.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section class="contact-section" id="contact">
-
-
-    <div class="contact-content">
-
-
-        <span class="contact-label">
-
-            05 — LET'S CONNECT
-
-        </span>
-
-
-        <h2>
-
-            Have a project
-
-            <em>in mind?</em>
-
-        </h2>
-
-
-        <p>
-
-            Let's turn your idea into something
-            visually remarkable.
-
-        </p>
-
-
-        <a
-            href="mailto:yourmail@example.com"
-            class="contact-btn"
-        >
-
-            Start a Conversation
-
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-        </a>
-
-
-    </div>
-
-
-
-    <div class="contact-details">
-
-
-        <div>
-
-            <span>
-                EMAIL
-            </span>
-
-            <a href="mailto:yourmail@example.com">
-
-                yourmail@example.com
-
+            
+            <p class="text-xs text-gray-500">Designed for Senior Visual Graphics Portfolio</p>
+
+            <a href="#" class="w-10 h-10 rounded-full bg-dark-800 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-brand-500 transition-all">
+                <i class="fa-solid fa-arrow-up"></i>
             </a>
-
         </div>
-
-
-
-        <div>
-
-            <span>
-                LOCATION
-            </span>
-
-            <p>
-                Bangladesh
-            </p>
-
-        </div>
-
-
-
-        <div>
-
-            <span>
-                STATUS
-            </span>
-
-            <p class="available-text">
-
-                Available for Projects
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="footer">
-
-
-    <div class="footer-top">
-
-
-        <div class="footer-brand">
-
-
-            <a href="#home" class="logo">
-
-                <span>P</span>arananda<span>.</span>
-
-            </a>
-
-
-            <p>
-
-                Professional Graphics Designer
-                creating meaningful and memorable
-                visual experiences.
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="footer-links">
-
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#services">
-                Services
-            </a>
-
-            <a href="#portfolio">
-                Portfolio
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-
-        </div>
-
-    </div>
-
-
-
-    <div class="footer-bottom">
-
-
-        <p>
-
-            © 2026 Parananda Roy.
-            All Rights Reserved.
-
-        </p>
-
-
-        <div>
-
-            <a href="#">
-                Behance
-            </a>
-
-            <a href="#">
-                Instagram
-            </a>
-
-            <a href="#">
-                Facebook
-            </a>
-
-        </div>
-
-
-    </div>
-
-</footer>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-
-
-/* MOBILE MENU */
-
-const menuBtn =
-    document.getElementById("menuBtn");
-
-const navLinks =
-    document.getElementById("navLinks");
-
-
-menuBtn.addEventListener("click", () => {
-
-    navLinks.classList.toggle("show");
-
-});
-
-
-
-/* CLOSE MOBILE MENU */
-
-document
-    .querySelectorAll(".nav-links a")
-    .forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navLinks.classList.remove("show");
-
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-    });
+        // Gallery Filter System
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
 
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-600', 'text-white');
+                    b.classList.add('text-gray-400');
+                });
+                btn.classList.add('active', 'bg-brand-600', 'text-white');
+                btn.classList.remove('text-gray-400');
 
+                const filter = btn.getAttribute('data-filter');
 
-/* ACTIVE NAVIGATION */
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
 
-const sections =
-    document.querySelectorAll("section");
+        // Contact Form Mock Submission
+        const contactForm = document.getElementById('contact-form');
+        const formResponse = document.getElementById('form-response');
 
-const navigationLinks =
-    document.querySelectorAll(".nav-links a");
-
-
-window.addEventListener("scroll", () => {
-
-
-    let current = "";
-
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop - 180;
-
-
-        if (window.scrollY >= sectionTop) {
-
-            current =
-                section.getAttribute("id");
-
-        }
-
-    });
-
-
-    navigationLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-
-        if (
-            link.getAttribute("href") ===
-            "#" + current
-        ) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-
-
-</script>
-
-
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formResponse.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formResponse.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
 </body>
-
 </html>
